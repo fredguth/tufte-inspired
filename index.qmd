@@ -8,13 +8,17 @@ abstract: |
 author: 
   - name: "Tufte Inspired Developers"
     email: github.com/fredguth/tufte-inspired
+toc: true
+open-graph: true
+site-url: https://fredguth.github.io/tufte-inspired/
+repo-url: https://github.com/fredguth/tufte-inspired/
+repo-actions: [edit, issue]
+
 version: [v.1.0]
 date: last-modified
-format: 
-    tufte-inspired-typst: 
-      keep-typ: true
-    tufte-inspired-html: default
-    native: default
+# format: 
+#     tufte-inspired-typst: 
+#       keep-typ: true
 execute: 
   echo: fenced
 bibliography: references.bib

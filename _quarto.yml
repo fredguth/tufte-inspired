@@ -1,0 +1,5 @@
+project:
+  type: manuscript
+format:
+  tufte-inspired-html: default
+  tufte-inspired-typst: default

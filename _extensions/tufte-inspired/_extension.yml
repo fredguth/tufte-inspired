@@ -5,7 +5,23 @@ quarto-required: ">=1.5.0"
 contributes:
   project:
     type: manuscript
+    output-dir: _manuscript
   formats:
+    html:
+      page-layout: full
+      reference-location: margin
+      citation-location: block
+      title-block-style: none
+      css: styles.css
+      number-sections: false
+      linkcolor: Maroon
+      backgroundcolor: FloralWhite
+      sidebarbackgroundcolor: FloralWhite
+      # mainfont: "heuristica"
+      toc: true
+      toc-location: left
+      toc-title: "Contents"
+      default-image-extension: svg
     typst:
       template-partials:
         - definitions.typ
@@ -15,9 +31,4 @@ contributes:
         - tufte-inspired.lua
       filters:
         - tufte-inspired.lua
-    html:
-      self-contained: true
-      grid: 
-        margin-width: 350px
       
-
