@@ -98,10 +98,11 @@ Any _full width_ content here.
 
 # Acknowledgements {.unlisted}
 
-Thanks to the Quarto and Typst teams for these wonderful tools.  This format is made possible by [Quarto's community](https://github.com/quarto-dev/quarto-cli/discussions?discussions_q=author%3Afredguth). Special thanks to:
+Thanks to the Quarto and Typst teams for these wonderful tools.  This format is made possible by [Quarto's](https://github.com/quarto-dev/quarto-cli/discussions?discussions_q=author%3Afredguth) and [Typst's](https://discord.gg/2uDybryKPe) communities. Special thanks to:
 
 - Mickaël Canouil (`@mcanouil`);
 - Gordon Woodhull (`@gordonwoodhull`);
 - Charles Teague (`@dragonstyle`);
 - Raniere Silva (`@rgaiacs`); and
 - Christophe Dervieux (`@cderv`)
+- `@pgsuper`
