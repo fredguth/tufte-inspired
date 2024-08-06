@@ -12,7 +12,7 @@ contributes:
       reference-location: margin
       # citation-location: margin
       title-block-style: none
-      css: styles.css
+      css: styles.scss
       number-sections: false
       linkcolor: Maroon
       backgroundcolor: FloralWhite
