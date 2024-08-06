@@ -7,5 +7,5 @@ article.typ
 tufte-inspired.lua
 
 /.quarto/
-/_manuscript/** */
+/_manuscript/
 /*_files/
