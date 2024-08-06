@@ -158,23 +158,20 @@ let authorblock() = [
 
 
 let tocblock() = {
-          set par(first-line-indent: 0pt)
-          
-          [#text(size:14pt, [#toc_title])
-          #set text(size:.75em, font: sans-fonts)
-          #outline(
-            title: none,
-            depth: 1,
-            indent: 1em
-          )]
-    
-        }
+  
+  set par(first-line-indent: 0pt)        
+  [#text(size:12pt,weight: "black", [#toc_title])
+  #set text(size:.75em, weight: "regular", style: "italic", number-type: "old-style")
+  #outline(
+    title: none,
+    depth: 1,
+    indent: 1em, 
+  )]
+}
     
 //TOC
-place(dx: 3.5in, dy:.5cm, right, block(width: 3.5in, inset: 1em,)[
-      #set align(left)
-      #if toc !=none [#tocblock()]
-])
+if toc !=none [#margin-note(dx:0em, dy:-1em)[#tocblock()]]
+
 
 
 
@@ -251,6 +248,7 @@ place(dx: 3.5in, dy:.5cm, right, block(width: 3.5in, inset: 1em,)[
   show cite.where(form:"prose"): none
 
   set text(size: 12pt)
+  v(-.5in)
   doc
 
   show bibliography: set text(font:sans-fonts)

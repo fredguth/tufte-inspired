@@ -10,18 +10,22 @@ contributes:
     html:
       page-layout: full
       reference-location: margin
-      citation-location: block
+      # citation-location: margin
       title-block-style: none
       css: styles.css
       number-sections: false
       linkcolor: Maroon
       backgroundcolor: FloralWhite
       sidebarbackgroundcolor: FloralWhite
-      # mainfont: "heuristica"
+      mainfont: "ETBembo"
       toc: true
       toc-location: left
       toc-title: "Contents"
+      code-annotations: hover
+      
       default-image-extension: svg
+      # template-partials:
+        # - title-block.html
     typst:
       template-partials:
         - definitions.typ

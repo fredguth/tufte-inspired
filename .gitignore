@@ -2,9 +2,10 @@
 Math*
 tufte.pdf
 Example*
-*.lua
+*.lua*
 article.typ
 tufte-inspired.lua
 
 /.quarto/
 /_manuscript/** */
+/*_files/
