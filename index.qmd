@@ -18,7 +18,10 @@ execute:
   freeze: auto
 bibliography: references.bib
 bibliographystyle: "springer-humanities-author-date"
-# jupyter: python3
+
+formats:
+  tufte-inspired-html: default
+  tufte-inspired-typst: default
   
 ---
 
@@ -91,22 +94,6 @@ Any _full width_ content here.
 :::
 ```
 
-Below is an example:
-
-::: {.fullwidth}
-
-```{r}
-#| label: fullwidth
-#| fig-cap: "A full width figure."
-#| fig-width: 11
-#| fig-height: 3
-#| fig-column: page-right
-#| warning: false
-ggplot(diamonds, aes(carat, price)) + geom_smooth() +
-  facet_grid(~ cut)
-```
-
-:::
 
 
 # Acknowledgements {.unlisted}

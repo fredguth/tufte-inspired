@@ -9,3 +9,4 @@ tufte-inspired.lua
 /.quarto/
 /_manuscript/
 /*_files/
+/.venv/
