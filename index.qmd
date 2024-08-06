@@ -15,8 +15,10 @@ version: [v.1.0]
 date: last-modified
 execute: 
   echo: fenced
+  freeze: auto
 bibliography: references.bib
 bibliographystyle: "springer-humanities-author-date"
+# jupyter: python3
   
 ---
 

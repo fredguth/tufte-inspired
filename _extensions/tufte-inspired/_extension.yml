@@ -24,6 +24,8 @@ contributes:
       code-annotations: hover
       
       default-image-extension: svg
+      format-resources:
+        - styles.scss
       # template-partials:
         # - title-block.html
     typst:
