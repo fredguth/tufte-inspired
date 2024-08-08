@@ -10,3 +10,4 @@ tufte-inspired.lua
 /_manuscript/
 /*_files/
 /.venv/
+/.luarc.json

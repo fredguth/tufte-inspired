@@ -10,7 +10,6 @@ contributes:
     html:
       page-layout: full
       reference-location: margin
-      # citation-location: margin
       title-block-style: none
       css: styles.scss
       number-sections: false
@@ -22,19 +21,16 @@ contributes:
       toc-location: left
       toc-title: "Contents"
       code-annotations: hover
-      
       default-image-extension: svg
-      format-resources:
-        - styles.scss
-      # template-partials:
-        # - title-block.html
+      filters:
+        - citing-html.lua
+
     typst:
       template-partials:
         - definitions.typ
         - typst-template.typ
         - typst-show.typ
-      format-resources: 
-        - tufte-inspired.lua
+
       filters:
         - tufte-inspired.lua
       

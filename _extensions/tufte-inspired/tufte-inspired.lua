@@ -1,3 +1,6 @@
+
+
+-- see https://github.com/quarto-dev/quarto-cli/discussions/10440
 function Cite(cite)
   local citation = cite.citations[1]
   
@@ -6,26 +9,28 @@ function Cite(cite)
   local mode = citation.mode or "NormalCitation"
   local prefix = citation.prefix and pandoc.utils.stringify(citation.prefix) or "none"
   local suffix = citation.suffix and pandoc.utils.stringify(citation.suffix) or "none"
-  local noteNum = citation.noteNum or "none"
-  local hash = citation.hash or "none"
+  local locator = citation.locator or "none"
+  local label = citation.label or "none"
+
+  -- Create a Typst function call with deconstructed parts
+  local typst_call = string.format(
+      '#margincite(<%s>, "%s", "%s", "%s", %s, %s)',
+      key, mode, prefix, suffix, locator, label
+  )
+
   
-  if suffix ~= "none" then
-    local supplement = suffix:gsub("%S*dy%.[%S]*", ""):gsub("^%s*(.-)%s*$", "%1")
-    cite.citations[1].suffix = pandoc.Str(supplement)
-  end
-
-
-  if FORMAT == 'typst' then
-      -- Create a Typst function call
-      local typst_call = string.format(
-          '#margincite(<%s>, "%s", "%s", "%s", %s, %s)',
-          key, mode, prefix, suffix, noteNum, hash
-      )
-      return pandoc.RawInline('typst', typst_call)
-  else
-      return cite
-  end
+  return pandoc.Inlines({
+      pandoc.RawInline('typst', typst_call)
+  })
 end
+
+
+
+
+
+
+
+
 
 
 -- -- inspired by: https://github.com/quarto-ext/typst-templates  ams/_extensions/ams/ams.lua

@@ -17,12 +17,7 @@ execute:
   echo: fenced
   freeze: auto
 bibliography: references.bib
-bibliographystyle: "springer-humanities-author-date"
-
-formats:
-  tufte-inspired-html: default
-  tufte-inspired-typst: default
-  
+bibliographystyle: "springer-humanities-author-date"  
 ---
 
 

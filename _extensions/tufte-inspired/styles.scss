@@ -6,8 +6,7 @@
 
 .quarto-title-banner {
   margin-bottom: 1em;
-  color: #545555;
-  background: #8f1d1c0a;
+  background: transparent;
 }
 
 .bg-primary {
@@ -18,12 +17,31 @@
 .btn {
   background-color: #316e6b !important;
 }
-
+.quarto-title-meta-heading {
+  letter-spacing: .1em;
+}
 .quarto-title-meta-contents a {
   font-size: 0; /* Hide the original text */
+  // font-kerning: 1.2em;
 }
 
 .quarto-title-meta-contents a[href$=".pdf"]::after {
   content: "PDF";
   font-size: 10.8pt;
+}
+
+#title-block-header {
+  color: #747e7f;
+  font-size: 90%;
+  font-stretch: 90%;
+  background-color: #8f1d1c0a !important;
+}
+.sidebar {
+  font-family: sans-serif;
+}
+
+div.sourceCode {
+  background-color: #8f1d1c0a;
+  border: 1px solid rgba(233,236,239,.65);
+  border-radius: .375rem;
 }
