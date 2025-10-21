@@ -10,3 +10,5 @@ tufte-inspired.lua
 /*_files/
 /.venv/
 /.luarc.json
+
+**/*.quarto_ipynb

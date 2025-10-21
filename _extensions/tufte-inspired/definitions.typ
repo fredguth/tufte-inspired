@@ -26,9 +26,9 @@
 // Some quarto-specific definitions.
 
 #show raw.where(block: true): block.with(
-    fill: luma(245), 
-    width: 100%, 
-    inset: 8pt, 
+    fill: luma(245),
+    width: 100%,
+    inset: 8pt,
     radius: 2pt
   )
 
@@ -45,11 +45,11 @@
 }
 
 #let empty(v) = {
-  if type(v) == "string" {
+  if type(v) == str {
     // two dollar signs here because we're technically inside
     // a Pandoc template :grimace:
     v.matches(regex("^\\s*$$")).at(0, default: none) != none
-  } else if type(v) == "content" {
+  } else if type(v) == content {
     if v.at("text", default: none) != none {
       return empty(v.text)
     }
@@ -114,13 +114,13 @@
 //     return it
 //   }
 // }
-// #show figure.where(kind: kind.matches(regex(""))): none 
+// #show figure.where(kind: kind.matches(regex(""))): none
 // callout rendering
 // this is a figure show rule because callouts are crossreferenceable
 #show figure: it => {
   set par(first-line-indent: 0em)
- 
-  if type(it.kind) != "string" {
+
+  if type(it.kind) != str {
     return it
   }
   let kind_match = it.kind.matches(regex("^quarto-callout-(.*)")).at(0, default: none)
@@ -144,9 +144,9 @@
   }
 
   let new_title_block = block_with_new_content(
-    old_title_block, 
+    old_title_block,
     block_with_new_content(
-      old_title_block.body, 
+      old_title_block.body,
       old_title_block.body.body.children.at(0) +
       old_title_block.body.body.children.at(1) +
       new_title))
@@ -159,23 +159,23 @@
 // 2023-10-09: #fa-icon("fa-info") is not working, so we'll eval "#fa-info()" instead
 #let callout(body: [], title: "Callout", background_color: luma(245), icon: none, icon_color: black) = {
   block(
-    breakable: false, 
-    fill: background_color, 
-    stroke: (paint: icon_color, thickness: 0.5pt, cap: "round"), 
-    width: 100%, 
+    breakable: false,
+    fill: background_color,
+    stroke: (paint: icon_color, thickness: 0.5pt, cap: "round"),
+    width: 100%,
     radius: 2pt,
     block(
       inset: 1pt,
-      width: 100%, 
-      below: 0pt, 
+      width: 100%,
+      below: 0pt,
       block(
-        fill: background_color, 
-        width: 100%, 
+        fill: background_color,
+        width: 100%,
         inset: 8pt)[#text(icon_color, weight: 900)[#icon] #title]) +
       if(body != []){
         block(
-          inset: 1pt, 
-          width: 100%, 
+          inset: 1pt,
+          width: 100%,
           block(fill: white, width: 100%, inset: 8pt, body))
       }
     )
